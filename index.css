@@ -77,10 +77,7 @@ body {
   -webkit-animation: loading 8s linear infinite;
           animation: loading 8s linear infinite;
   border-bottom: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 0.3rem;
+  font-size: 5px;
 }
 .nav-title .loader .inner {
   display: flex;

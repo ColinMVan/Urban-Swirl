@@ -88,8 +88,7 @@ body {
 
   .loader {
     @include circle();
-    width: fit-content;
-    font-size: 0.3rem;
+    font-size: 5px;
 
     .inner {
       @include circle;
