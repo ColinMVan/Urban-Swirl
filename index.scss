@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --background: hsl(0, 0%, 3%);
+  --text: #e75480;
+}
+
+$border-size: 0.6em;
+
+@mixin circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60%;
+  border: $border-size solid var(--text);
+  padding: 0.8em;
+  height: fit-content;
+  animation: loading 8s linear infinite;
+  // border-bottom: $border-size solid var(--background);
+  border-bottom: none;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  background-image: url("/images/urbanswirl-ice-cream.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  height: 100vh;
+}
+
+.nav-bar {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em 0;
+  letter-spacing: 2px;
+
+  .links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    align-items: center;
+    margin-left: auto;
+
+    #contact {
+      border: 1px solid var(--text);
+      padding: 0.2em 0.4em;
+      border-radius: 10px;
+      transition: background-color 200ms ease-in, color 200ms ease-in;
+
+      &:hover {
+        background-color: var(--text);
+        color: var(--background);
+      }
+    }
+
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+
+  .loader {
+    @include circle();
+    width: fit-content;
+    font-size: 0.3rem;
+
+    .inner {
+      @include circle;
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+
+  .hero-title {
+    font-size: 10rem;
+    font-family: "Playfair Display", sans-serif;
+  }
+
+  .desc {
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  .themeChanger {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    button {
+      width: fit-content;
+      padding: 1em 2em;
+      border: 2px solid var(--text);
+      color: var(--text);
+      background-color: transparent;
+      transition: background-color 200ms ease-in, color 200ms ease-in;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: var(--text);
+        color: var(--background);
+      }
+    }
+  }
+}
