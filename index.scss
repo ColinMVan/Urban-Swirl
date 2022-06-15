@@ -9,7 +9,7 @@
 }
 
 :root {
-  --background: hsl(0, 0%, 3%);
+  --background: hsl(0, 0%, 8%);
   --text: #e75480;
 }
 
@@ -31,10 +31,12 @@ $border-size: 0.6em;
 body {
   background-color: var(--background);
   color: var(--text);
-  background-image: url("/images/urbanswirl-ice-cream.jpeg");
+  // background-image: url("/images/urbanswirl-ice-cream.jpeg");
+  background-image: url("https://static.wixstatic.com/media/52b53d_be803c789b5f441ba7b2fd09c7d23918~mv2.jpg/v1/fit/w_878,h_692,q_90/52b53d_be803c789b5f441ba7b2fd09c7d23918~mv2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: soft-light;
+  background-position: center;
   height: 100vh;
 }
 
@@ -49,7 +51,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
     margin-left: auto;
 
