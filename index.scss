@@ -67,6 +67,14 @@ body {
     align-items: center;
     margin-left: auto;
 
+    li {
+      transition: transform 200ms ease-in;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+
     #contact {
       border: 1px solid var(--text);
       padding: 0.2em 0.4em;

@@ -48,6 +48,12 @@ body {
   align-items: center;
   margin-left: auto;
 }
+.nav-bar .links li {
+  transition: transform 200ms ease-in;
+}
+.nav-bar .links li:hover {
+  transform: scale(1.2);
+}
 .nav-bar .links #contact {
   border: 1px solid var(--text);
   padding: 0.2em 0.4em;
