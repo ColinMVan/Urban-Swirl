@@ -144,4 +144,31 @@ body {
 .hero .desc {
   font-weight: 300;
   letter-spacing: 2px;
+}
+.hero a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 1em 2em;
+  border: 2px solid var(--text);
+  margin-top: 4rem;
+  transition: box-shadow 500ms ease-in;
+  position: relative;
+  transition: color 300ms ease-in;
+}
+.hero a::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 0;
+  background-color: var(--text);
+  transition: width 300ms ease-in;
+}
+.hero a:hover {
+  color: var(--background);
+}
+.hero a:hover::after {
+  width: 100%;
+  z-index: -100;
 }/*# sourceMappingURL=index.css.map */
